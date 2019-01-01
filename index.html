@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>ТеррБанк по ИНН</title>
   <link rel="shortcut icon" href="/60x60bb.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/main.css">
@@ -22,14 +22,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="https://inn-sb.github.io">Главная</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
+
     </ul>
     
   </div>
@@ -64,7 +62,7 @@
 <div class="container">
     <div id="demo" class="row">
 
-      <div class="m-5 form-group">
+      <div class="m-2 form-group">
           <form id="search">
             <label for="exampleInputEmail1">Найти</label> 
             <input name="query" v-model="searchQuery"  class="form-control">
@@ -75,7 +73,7 @@
           </div>
       </div>
 
-      <demo-grid class="m-4"
+      <demo-grid class="m-2"
         :data="gridData"
         :columns="gridColumns"
         :filter-key="searchQuery">
