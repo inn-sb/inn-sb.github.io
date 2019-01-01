@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <title>ТеррБанк по ИНН</title>
+  <link href="/Fonts/OpenSans-Regular.ttf?family=Open+Sans" rel="stylesheet">
   <link rel="shortcut icon" href="/60x60bb.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/main.css">
   <script src="/js/vue.min.js"></script>
   <script src="/js/script.js" defer></script>
 </head>
+
 <body>
-  
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
     <a class="navbar-brand" href="https://www.sberbank.ru/ru/s_m_business" blank>
-    <img src="/image/ico_sb.png" width="30" height="30" alt="">
-  </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      <img src="/image/ico_sb.png" width="30" height="30" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="https://inn-sb.github.io">Главная</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://inn-sb.github.io">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
 
-    </ul>
-    
-  </div>
-</nav>
+      </ul>
+
+    </div>
+  </nav>
   <br><br><br>
 
-<!-- component template -->
-<script type="text/x-template" id="grid-template">
-  <table>
+  <!-- component template -->
+  <script type="text/x-template" id="grid-template">
+    <table>
     <thead>
       <tr>
         <th v-for="key in columns"
@@ -58,32 +62,30 @@
   </table>
 </script>
 
-<!-- demo root element -->
-<div class="container">
+  <!-- demo root element -->
+  <div class="container">
     <div id="demo" class="row">
 
       <div class="m-2 form-group">
-          <form id="search">
-            <label for="exampleInputEmail1">Найти</label> 
-            <input name="query" v-model="searchQuery"  class="form-control">
-            <small id="" class="form-text text-muted">Введите первые 2 цифры ИНН</small>
-          </form>
-          <div>
-            
-          </div>
+        <form id="search">
+          <label for="exampleInputEmail1">Найти</label>
+          <input name="query" v-model="searchQuery" class="form-control">
+          <small id="" class="form-text text-muted">Введите первые 2 цифры ИНН</small>
+        </form>
+        <div>
+
+        </div>
       </div>
 
-      <demo-grid class="m-2"
-        :data="gridData"
-        :columns="gridColumns"
-        :filter-key="searchQuery">
+      <demo-grid class="m-2" :data="gridData" :columns="gridColumns" :filter-key="searchQuery">
       </demo-grid>
     </div>
-</div>
+  </div>
 
-<script src="/js/jquery-3.3.1.slim.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+  <script src="/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

@@ -1,8 +1,15 @@
 body {
-  font-family: Helvetica Neue, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #444;
 }
+
+/* @font-face { 
+  font-family: 'OpenSans-Regular'; 
+  src: local(OpenSans-Regular), url(fonts/OpenSans-Regular.ttf);
+  font-weight: normal; 
+  font-style: normal; 
+} */
 
 table {
   border: 2px solid #42b983;
@@ -25,8 +32,8 @@ td {
 }
 
 th, td {
-  min-width: 120px;
-  padding: 10px 20px;
+  /* min-width: 120px; */
+  padding: 10px 10px;
 }
 
 th.active {
