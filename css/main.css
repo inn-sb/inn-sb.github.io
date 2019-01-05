@@ -32,7 +32,7 @@ th {
 
 td {
   background-color: #f9f9f9;
-  border: 4px red;
+  /* border: 4px red; */
 }
 
 th, td {
@@ -68,7 +68,15 @@ th.active .arrow {
   border-right: 4px solid transparent;
   border-top: 4px solid #fff;
 }
-#divInput {
-  /* border: 1px red; */
+#demo {
+ max-width: 400px;
   width: 400px;
+}
+#divBtn {
+  display: block;
+  /* flex-flow: row wrap; */
+  justify-items : center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }

@@ -58,7 +58,7 @@ Vue.component('demo-grid', {
 var demo = new Vue({
   el: '#demo',
   data: {
-    
+    showTbl: true,
     searchQuery: '',
     gridColumns: ['ИНН', 'банк', 'область'],
     gridData: [
@@ -166,8 +166,14 @@ var demo = new Vue({
     clear() {
         this.searchQuery = ''
     }
-}
+},
+computed: {
+  isSearchQuery() {
+      return this.searchQuery !== '';
+  }
+  }
 })
+
 
 // var body = new Vue({
 //   el: '#body',

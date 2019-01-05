@@ -3,13 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>ТеррБанк по ИНН</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- <link href="/Fonts/OpenSans-Regular.ttf?family=Open+Sans" rel="stylesheet"> -->
   <link rel="shortcut icon" href="/60x60bb.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/main.css">
   <script src="/js/vue.min.js"></script>
   <script src="/js/script.js" defer></script>
+  <title>ТеррБанк по ИНН</title>
+
 </head>
 
 <body>
@@ -37,12 +39,7 @@
     </div>
   </nav>
   <br><br><br>
-  <!-- Table visibility switch -->
-  <!-- <div class="custom-control custom-switch d-flex justify-content-center m-2">
-    <input type="checkbox" class="custom-control-input" id="customSwitch1" v-on:click="ShowTbl = !ShowTbl">
-    <label class="custom-control-label" for="customSwitch1">Вкл/Выкл всю таблицу</label>
-  </div> -->
-  <!-- Table visibility switch -->
+
 
 
 
@@ -73,25 +70,27 @@
   <!-- demo root element -->
   <div class="container justify-content-center">
     <div id="demo" class="row justify-content-center w-50 m-auto">
-      <div class=" justify-content-center">
-
+      <div class=" justify-content-center" id="divBtn">
+        <!-- Table visibility switch -->
         <div class="custom-control custom-switch d-flex justify-content-center">
-          <input type="checkbox" class="custom-control-input" id="customSwitch1" v-on:click="ShowTbl = !ShowTbl">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1" v-on:click="showTbl = !showTbl">
           <label class="custom-control-label" for="customSwitch1">Вкл/Выкл всю таблицу</label>
+          <!-- Table visibility switch -->
         </div><br>
-
-        <div class="btn btn-success m-1" @click="append('0')">0</div>
-        <div class="btn btn-success m-1" @click="append('1')">1</div>
-        <div class="btn btn-success m-1" @click="append('2')">2</div>
-        <div class="btn btn-success m-1" @click="append('3')">3</div>
-        <div class="btn btn-success m-1" @click="append('4')">4</div>
-        <div class="btn btn-success m-1" @click="append('5')">5</div>
-        <div class="btn btn-success m-1" @click="append('6')">6</div>
-        <div class="btn btn-success m-1" @click="append('7')">7</div>
-        <div class="btn btn-success m-1" @click="append('8')">8</div>
-        <div class="btn btn-success m-1" @click="append('9')">9</div>
+        <div class="col-lg-6 border">
+          <div class="btn btn-success m-1" @click="append('1')">1</div>
+          <div class="btn btn-success m-1" @click="append('2')">2</div>
+          <div class="btn btn-success m-1" @click="append('3')">3</div>
+          <div class="btn btn-success m-1" @click="append('4')">4</div>
+          <div class="btn btn-success m-1" @click="append('5')">5</div>
+          <div class="btn btn-success m-1" @click="append('6')">6</div>
+          <div class="btn btn-success m-1" @click="append('7')">7</div>
+          <div class="btn btn-success m-1" @click="append('8')">8</div>
+          <div class="btn btn-success m-1" @click="append('9')">9</div>
+          <div class="btn btn-success m-1" @click="append('0')">0</div>
+        </div>
       </div>
-      <div id="divInput" class="m-2 form-group w-auto position-relative">
+      <div id="divInput" class="m-2 form-group w-auto position-relative">{{ isSearchQuery }}
         <form id="search">
           <label class="" for=""></label>
           <div class="input-group">
@@ -101,12 +100,12 @@
           <small id="" class="form-text text-muted">Введите первые 2 цифры ИНН</small>
         </form>
         <div>
-
         </div>
       </div>
-
-      <demo-grid class="m-2" :data="gridData" :columns="gridColumns" :filter-key="searchQuery">
+      <!-- Grid Table -->
+      <demo-grid v-if="showTbl || isSearchQuery" class="m-2" :data="gridData" :columns="gridColumns" :filter-key="searchQuery">
       </demo-grid>
+      <!-- Grid Table -->
     </div>
   </div>
 
