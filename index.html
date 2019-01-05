@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>ТеррБанк по ИНН</title>
-  <link href="/Fonts/OpenSans-Regular.ttf?family=Open+Sans" rel="stylesheet">
+  <!-- <link href="/Fonts/OpenSans-Regular.ttf?family=Open+Sans" rel="stylesheet"> -->
   <link rel="shortcut icon" href="/60x60bb.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/main.css">
@@ -37,6 +37,14 @@
     </div>
   </nav>
   <br><br><br>
+  <!-- Table visibility switch -->
+  <!-- <div class="custom-control custom-switch d-flex justify-content-center m-2">
+    <input type="checkbox" class="custom-control-input" id="customSwitch1" v-on:click="ShowTbl = !ShowTbl">
+    <label class="custom-control-label" for="customSwitch1">Вкл/Выкл всю таблицу</label>
+  </div> -->
+  <!-- Table visibility switch -->
+
+
 
   <!-- component template -->
   <script type="text/x-template" id="grid-template">
@@ -61,15 +69,35 @@
     </tbody>
   </table>
 </script>
-
+  <!-- </div> -->
   <!-- demo root element -->
-  <div class="container">
-    <div id="demo" class="row">
+  <div class="container justify-content-center">
+    <div id="demo" class="row justify-content-center w-50 m-auto">
+      <div class=" justify-content-center">
 
-      <div class="m-2 form-group">
+        <div class="custom-control custom-switch d-flex justify-content-center">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1" v-on:click="ShowTbl = !ShowTbl">
+          <label class="custom-control-label" for="customSwitch1">Вкл/Выкл всю таблицу</label>
+        </div><br>
+
+        <div class="btn btn-success mx-1" @click="append('0')">0</div>
+        <div class="btn btn-success mx-1" @click="append('1')">1</div>
+        <div class="btn btn-success mx-1" @click="append('2')">2</div>
+        <div class="btn btn-success mx-1" @click="append('3')">3</div>
+        <div class="btn btn-success mx-1" @click="append('4')">4</div>
+        <div class="btn btn-success mx-1" @click="append('5')">5</div>
+        <div class="btn btn-success mx-1" @click="append('6')">6</div>
+        <div class="btn btn-success mx-1" @click="append('7')">7</div>
+        <div class="btn btn-success mx-1" @click="append('8')">8</div>
+        <div class="btn btn-success mx-1" @click="append('9')">9</div>
+      </div>
+      <div id="divInput" class="m-2 form-group w-auto position-relative">
         <form id="search">
-          <label for="exampleInputEmail1">Найти</label>
-          <input name="query" v-model="searchQuery" class="form-control">
+          <label class="" for=""></label>
+          <div class="input-group">
+            <input name="query" v-model="searchQuery" class="form-control">
+            <div class="btn btn-success input-group-append" @click="clear()">X</div>
+          </div>
           <small id="" class="form-text text-muted">Введите первые 2 цифры ИНН</small>
         </form>
         <div>

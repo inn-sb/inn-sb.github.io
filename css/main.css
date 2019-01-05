@@ -1,4 +1,5 @@
 body {
+  flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #444;
@@ -15,12 +16,14 @@ table {
   border: 2px solid #42b983;
   border-radius: 3px;
   background-color: #fff;
+  /* min-width: 400px; */
 }
 
 th {
   background-color: #42b983;
   color: rgba(255,255,255,0.66);
   cursor: pointer;
+  text-align: center;
   /* -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -29,10 +32,11 @@ th {
 
 td {
   background-color: #f9f9f9;
+  border: 4px red;
 }
 
 th, td {
-  /* min-width: 120px; */
+  min-width: 80px;
   padding: 10px 10px;
 }
 
@@ -63,4 +67,8 @@ th.active .arrow {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 4px solid #fff;
+}
+#divInput {
+  /* border: 1px red; */
+  width: 400px;
 }

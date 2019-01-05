@@ -52,10 +52,13 @@ Vue.component('demo-grid', {
   }
 })
 
+
+
 // bootstrap the demo
 var demo = new Vue({
   el: '#demo',
   data: {
+    
     searchQuery: '',
     gridColumns: ['ИНН', 'банк', 'область'],
     gridData: [
@@ -155,5 +158,20 @@ var demo = new Vue({
 
 
 ]
-  }
+  },
+  methods: {
+    append(value) {
+        this.searchQuery += value.toString()
+    },
+    clear() {
+        this.searchQuery = ''
+    }
+}
 })
+
+// var body = new Vue({
+//   el: '#body',
+//   data: {
+//     showTbl: true,
+//   }
+// })
