@@ -70,14 +70,14 @@
   <!-- demo root element -->
   <div class="container justify-content-center">
     <div id="demo" class="row justify-content-center w-50 m-auto">
-      <div class=" justify-content-center" id="divBtn">
+      <div class="column justify-content-center" id="divBtn">
         <!-- Table visibility switch -->
         <div class="custom-control custom-switch d-flex justify-content-center">
           <input type="checkbox" class="custom-control-input" id="customSwitch1" v-on:click="showTbl = !showTbl">
           <label class="custom-control-label" for="customSwitch1">Вкл/Выкл всю таблицу</label>
           <!-- Table visibility switch -->
         </div><br>
-        <div class="col-lg-6 border">
+        <div class="col-lg-6 border" id="btn10">
           <div class="btn btn-success m-1" @click="append('1')">1</div>
           <div class="btn btn-success m-1" @click="append('2')">2</div>
           <div class="btn btn-success m-1" @click="append('3')">3</div>
@@ -90,7 +90,7 @@
           <div class="btn btn-success m-1" @click="append('0')">0</div>
         </div>
       </div>
-      <div id="divInput" class="m-2 form-group w-auto position-relative">{{ isSearchQuery }}
+      <div id="divInput" class="m-2 form-group w-auto position-relative">
         <form id="search">
           <label class="" for=""></label>
           <div class="input-group">
