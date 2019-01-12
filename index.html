@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="/60x60bb.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/main.css">
-  <script src="/js/vue.min.js"></script>
+  <script src="/js/vue.min.js" defer></script>
   <script src="/js/script.js" defer></script>
   <title>ТеррБанк по ИНН</title>
 
@@ -17,7 +17,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
-    <a class="navbar-brand" href="https://www.sberbank.ru/ru/s_m_business" target="_blank" title="СБ для ЮрЛ">
+    <a class="navbar-brand" href="https://www.sberbank.ru/ru/s_m_business" target="_blank" title="sberbank.ru для юр.лиц">
       <img src="/image/ico_sb.png" width="30" height="30" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -35,7 +35,7 @@
         </li>
 
       </ul>
-      <a class="navbar-brand" href="https://github.com/inn-sb/inn-sb.github.io" target="blank">
+      <a class="navbar-brand" href="https://github.com/inn-sb/inn-sb.github.io" target="blank" title="Исходник на GitHub.io">
         <img src="/image/GitHub-Mark-Light-64px.png" width="30" height="30" alt="">
       </a>
     </div>
@@ -96,10 +96,10 @@
         <form id="search">
           <label class="" for=""></label>
           <div class="input-group">
-            <input name="query" v-model="searchQuery" class="form-control">
+            <input name="query" v-model="searchQuery" class="form-control" placeholder="ИНН">
             <div class="btn btn-success input-group-append" @click="clear()">X</div>
           </div>
-          <small id="" class="form-text text-muted">Введите первые 2 цифры ИНН</small>
+          <small id="" class="form-text text-muted">Введите первые 2 цифры</small>
         </form>
         <div>
         </div>
